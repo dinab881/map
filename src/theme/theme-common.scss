@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem =  10px, 10px/16px = 62.5%
+
+  /*@media only screen and (max-width: $bp-large){
+    font-size: 50%;
+  }*/
+
+}
+
+
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  color: $font-content;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: $bg-color;
+
+}
+
+a {
+  text-decoration: none;
+  color: $heading;
+}
+
+p{
+  font-size:2rem;
+  color: rgba($font-content, 0.5);
+}
+
+.container{
+  max-width: 1691px;
+  margin: 0 auto;
+}
+
+.logo{
+  width:100%;
+  height:9rem;
+}
+
+.mat-toolbar {
+  background: $bg-color;
+  color:#49494b;
+
+
+
+  .mat-display-2{
+    color: rgba($font-content, 0.5);
+    margin-left:auto;
+  }
+}
+
+.heading-secondary{
+  margin-bottom: 0.5em;
+}
+
+.mg-bottom{
+  margin-bottom:3.3em;
+}
+
+// Material
+.mat-radio-button{
+
+  .mat-radio-container{
+    width: 18px;
+    height: 18px;
+
+    .mat-radio-inner-circle{
+      width:18px;
+      height:18px;
+      background-color: $radio-button-checked;
+    }
+
+    .mat-radio-ripple {
+      left: calc(50% - 18px);
+      top: calc(50% - 18px);
+      height: 36px;
+      width: 36px;
+    }
+   }
+
+  .mat-radio-outer-circle{
+    width:18px;
+    height:18px;
+    border: 2px solid $radio-border-color;
+  }
+
+  &.mat-radio-checked .mat-radio-inner-circle {
+    transform: scale(.6);
+  }
+
+
+
+
+}
+

@@ -1,0 +1,16 @@
+<ng-select [multiple]="false" (change) = "selectStateOnMap($event)">
+    <ng-option *ngFor="let opt of usStates" [value]="opt.name">{{opt.name}}</ng-option>
+</ng-select>
+
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  (mapReady)="onMapReady($event)"
+  [zoom]="3.5"
+  (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
+  <agm-polygon [paths]="paths" [fillColor]="'#57E297'" [strokeWeight]="0"></agm-polygon>
+</agm-map>
+{{paths.length}}
+<p *ngIf="selectedMarker">
+  Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
+</p>

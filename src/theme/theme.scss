@@ -1,0 +1,20 @@
+@import "~@angular/material/theming";
+
+@include mat-core ();
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Nunito, sans-serif',
+  $display-1: mat-typography-level(35px, 1, 700, $letter-spacing: 0.2px),
+  $display-2: mat-typography-level(25px, 1, 500, $letter-spacing: 0.2px),
+  $title: mat-typography-level(30px, 1, 700, $letter-spacing: 0.2px),
+  $input: mat-typography-level(25px, 1, 300)
+);
+
+$custom-theme-primary: mat-palette($custom-grey);
+$custom-theme-accent: mat-palette($custom-blue);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+
+@include angular-material-theme($custom-theme);
+@include angular-material-typography($custom-typography);

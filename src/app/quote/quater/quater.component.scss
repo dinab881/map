@@ -1,0 +1,58 @@
+@import '~src/theme/theme-variables';
+.quater-wrapper{
+  width:47%;
+  border-radius: 5px;
+  border: solid 1px $border-color;
+  background-color: $white;
+  padding:4rem;
+  font-size:2rem;
+
+}
+
+.quater-table{
+  width:100%;
+  &.mat-table thead{
+
+  }
+  tr.mat-header-row{
+    background-color: $table-head-color;
+
+  }
+  .mat-header-cell{
+    color: $white;
+    font-size:2rem;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    font-family: $main-font;
+    text-align:center;
+  }
+  .mat-cell{
+    opacity: 0.5;
+    font-family: $main-font;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.01rem;
+    color: $table-cell-color;
+    border-bottom-width: 0;
+
+    padding:2.2rem 1.8rem;
+
+
+    &.mat-column-quater{
+      font-size: 1.8rem;
+      line-height: 1.17;
+      font-weight: 700;
+      color: $heading;
+      opacity:1;
+    }
+    &.mat-column-select{
+      padding:2.2rem 0 2.2rem 1rem;
+    }
+  }
+
+  .mat-row{
+    &:nth-child(even) {
+      background-color: $table-even-color;
+    }
+  }
+}

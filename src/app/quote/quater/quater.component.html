@@ -1,0 +1,69 @@
+
+<div class="quater-wrapper">
+  <h2 class="heading-secondary mat-h2">Quater</h2>
+  <p class="mg-bottom">Choose the quarter you would like to insure </p>
+  <table mat-table [dataSource]="dataSource" class="quater-table">
+
+    <!-- Radio Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-radio-button (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)">
+        </mat-radio-button>
+      </td>
+    </ng-container>
+
+    <!-- Quater Column -->
+    <ng-container matColumnDef="quater">
+      <th mat-header-cell *matHeaderCellDef>Quater </th>
+      <td mat-cell *matCellDef="let element">{{element.quater}} </td>
+    </ng-container>
+
+    <!-- Class III Column -->
+    <ng-container matColumnDef="class3">
+      <th mat-header-cell *matHeaderCellDef>Class III</th>
+      <td mat-cell *matCellDef="let element">{{element.class3 | currency: 'USD':'symbol':'1.2-4'}} </td>
+    </ng-container>
+
+    <!-- Class IV Column -->
+    <ng-container matColumnDef="class4">
+      <th mat-header-cell *matHeaderCellDef>Class IV</th>
+      <td mat-cell *matCellDef="let element"> {{element.class4 | currency: 'USD':'symbol':'1.2-4'}} </td>
+    </ng-container>
+
+    <!-- Butterfat Column -->
+    <ng-container matColumnDef="butterfat">
+      <th mat-header-cell *matHeaderCellDef>Butterfat</th>
+      <td mat-cell *matCellDef="let element"> {{element.butterfat | currency: 'USD':'symbol':'1.2-4'}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="protein">
+      <th mat-header-cell *matHeaderCellDef>Protein</th>
+      <td mat-cell *matCellDef="let element"> {{element.protein | currency: 'USD':'symbol':'1.2-4'}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="otherSolids">
+      <th mat-header-cell *matHeaderCellDef>Other solids</th>
+      <td mat-cell *matCellDef="let element"> {{element.otherSolids | currency : 'USD':'symbol':'1.2-4'}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="yield">
+      <th mat-header-cell *matHeaderCellDef>Yield</th>
+      <td mat-cell *matCellDef="let element"> {{element.yield}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+</div>
+
+
