@@ -1,8 +1,7 @@
 @import '~src/theme/theme-variables';
 .component-wrapper{
-  &--quater{
-    width:47%;
+  &--location{
+    width:27%;
+    border:1px solid red;
   }
 }
-
-

@@ -10,7 +10,5 @@
   (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
   <agm-polygon [paths]="paths" [fillColor]="'#57E297'" [strokeWeight]="0"></agm-polygon>
 </agm-map>
-{{paths.length}}
-<p *ngIf="selectedMarker">
-  Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
-</p>
+
+

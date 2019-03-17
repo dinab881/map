@@ -1,6 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatCheckboxModule, MatRadioModule, MatSidenavModule, MatTableModule, MatToolbarModule} from '@angular/material';
+import {
+  MatCheckboxModule, MatIconModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatToolbarModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -11,7 +19,10 @@ import {MatCheckboxModule, MatRadioModule, MatSidenavModule, MatTableModule, Mat
     MatToolbarModule,
     MatTableModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatInputModule,
+    MatIconModule
   ],
   exports: [
     FormsModule,
@@ -20,7 +31,10 @@ import {MatCheckboxModule, MatRadioModule, MatSidenavModule, MatTableModule, Mat
     MatToolbarModule,
     MatTableModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatInputModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

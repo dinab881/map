@@ -1,0 +1,18 @@
+<h2 class="heading-secondary mat-h2">Location</h2>
+
+<mat-form-field appearance="outline" class="mat-form-field-select">
+<mat-select
+              panelClass="drp-select"
+              [(value)]="selected">
+    <mat-option *ngFor="let opt of usStates" value="{{opt.name}}">{{opt.name}}</mat-option>
+  </mat-select>
+  <span matPrefix><mat-icon>room</mat-icon></span>
+</mat-form-field>
+
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="3.5">
+  <agm-polygon [paths]="paths" [fillColor]="'#57E297'" [strokeWeight]="0"></agm-polygon>
+</agm-map>
+
